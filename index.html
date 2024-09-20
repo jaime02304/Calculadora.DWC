@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main{
+        justify-content: center;
+    }
+ 
+    div{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+        justify-content: center;
+        margin: 10px;
+        background-color: rgb(51, 51, 51);
+    }
+    input{
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    button{
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+    }
+    button:hover{
+        background-color: white;
+        color: black;
+        transition: 500ms;
+    }
+
+    #resultado{
+        color: white;
+    }
+</style>
+<body>
+    <main>
+        <div>
+            <input type="number" placeholder="Deposite el primer numero" id="numero1">
+            <select name="operaciones" id="operador">
+                <option value="" selected>Elija una operacion</option>
+                <option value="1">+</option>
+                <option value="2">-</option>
+                <option value="3">*</option>
+                <option value="4">/</option>
+            </select>
+            <input type="number" placeholder="Deposite el segundo numero" id="numero2">
+            <button onclick="operarNumeros()">Calcular</button>
+            <div id="resultado"></div>
+        </div>
+        
+        
+    </main>
+    <script src="js/operacion.js"></script>
+</body>
+</html>
