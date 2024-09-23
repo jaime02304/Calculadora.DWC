@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    main {
+      justify-content: center;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      background-color: rgb(51, 51, 51);
+    }
+    input {
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    button {
+      color: white;
+      background-color: black;
+      border-radius: 10px;
+    }
+    button:hover {
+      background-color: white;
+      color: black;
+      transition: 500ms;
+    }
+
+    #resultado {
+      color: white;
+    }
+  </style>
+  <body>
+    <main>
+      <div>
+        <input
+        class="w-75"
+          type="number"
+          placeholder="Deposite el primer numero"
+          id="numero1"
+        />
+        <select name="operaciones form-select w-100" size="3" aria-label="Size 3 select example" id="operador">
+          <option selected>Elija una operacion</option>
+          <option value="1">+</option>
+          <option value="2">-</option>
+          <option value="3">*</option>
+          <option value="4">/</option>
+        </select>
+        <input
+        class="w-75"
+          type="number"
+          placeholder="Deposite el segundo numero"
+          id="numero2"
+        />
+        <button onclick="operarNumeros()">Calcular</button>
+        <div id="resultado"></div>
+      </div>
+      <div>
+        <ul class="list-group"></ul>
+          <h3 class="text-center text-light">Lista de registros de la Calculadora</h3>
+          <div class="list-group-item text-center text-light" id="listaPantalla"></div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/operacion.js"></script>
+  </body>
+</html>
