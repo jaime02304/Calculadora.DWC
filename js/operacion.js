@@ -31,6 +31,7 @@ function operarNumeros() {
   }
 }
 
+//Hay una manera mas eficente-->https://github.com/jmpolavieja/calculadora.git
 function mostrarLista(n1,op,n2,res,contenidoL){
     arrayResultado.push(n1 + op + n2 + "=" + res);
     for (let i = 0; i < arrayResultado.length; i++) {
